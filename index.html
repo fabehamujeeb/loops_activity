@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>activity</title>
+    </head>
+    <body>
+       <p id="demo"></p>
+       <p id="demo2"></p>
+       <p id="demo3"></p>
+    <script>
+        var date;
+        switch (new Date().getDate()) {
+            case 17:
+                date = "17 Nov";
+                break;
+            case 18:
+                date = "18 Nov";
+                break;
+            case 19:
+                date = "19 Nov";
+                break;
+            case 20:
+                date = "20 Nov";
+                break;
+            default:
+                date = "Date not in range";
+        }
+        document.getElementById("demo").innerHTML = "Today is " + date;
+        function generateRandomSet(size) {
+                const randomSet = [];
+                for (let i = 0; i < size; i++) {
+                    randomSet.push(Math.floor(Math.random() * 100));
+                    }
+            return randomSet;
+        }
+        const randomSet = generateRandomSet(10);
+        const randomNumber = Math.random() * 100; // Random number from 0 to 100
+        const roundedNumber = Math.round(randomNumber);
+        document.getElementById("demo2").innerHTML = "Random Set: " + randomSet.join(", ");
+        document.getElementById("demo3").innerHTML = "Rounded Random Number: " + roundedNumber;
+    </script>
+    </body>
+</html>
